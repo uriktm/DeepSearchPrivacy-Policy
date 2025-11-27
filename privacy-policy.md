@@ -1,6 +1,6 @@
 # Privacy Policy
 
-_Last updated: November 17, 2025_
+_Last updated: November 27, 2025_
 
 Bookmark Deep Search ("the Extension") is a Chrome extension that helps you index and search your bookmarks locally on your device. This Privacy Policy explains what data we handle and how we keep it private.
 
@@ -16,9 +16,8 @@ Bookmark Deep Search ("the Extension") is a Chrome extension that helps you inde
 | --- | --- |
 | `bookmarks` | Read your bookmark tree so you can choose which folders to index. |
 | `storage` | Save local configuration, indexing progress, and cached embeddings. |
-| `activeTab` & `tabs` | Temporarily open the bookmarked page in the background when indexing content. |
-| `scripting` | Inject the Readability library into the temporarily opened tab to extract page text locally. |
 | `alarms` | Schedule background indexing batches without keeping the popup open. |
+| `offscreen` | Process and index web pages in the background without opening visible tabs. |
 | `host_permissions` (`<all_urls>`) | Needed only while indexing to allow local extraction of content from the bookmarked page you selected. No data from these pages leaves your device. |
 
 We request only the permissions required for the core functionality, and they are used exclusively for the purposes described above.
@@ -36,7 +35,7 @@ The Extension does not integrate with advertising networks, analytics providers,
 ## Security Measures
 
 - Processing runs locally inside Chrome's extension sandbox.
-- Temporary tabs created during indexing are closed automatically after processing.
+- Pages are processed in an isolated offscreen document.
 - No network requests are made with your bookmark data.
 
 ## Children’s Privacy
